@@ -14,13 +14,13 @@ const secondEl = document.getElementById('select');
 
 const transEl = document.getElementById('trans')
 
-btnEl1.addEventListener('click', ()=> {
+btnEl1.addEventListener('click', () => {
   secondEl.classList.add('show');
   dropEl.classList.add('show');
   console.log('hey');
 })
 
-dropEl.addEventListener('click', ()=> {
+dropEl.addEventListener('click', () => {
   secondEl.classList.remove('show');
   trandivEl.classList.remove('show');
   dropEl.classList.remove('show');
