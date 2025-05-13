@@ -1,14 +1,240 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texas Rangers Tickets</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #003263;
+      color: white;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-left img {
+      height: 28px;
+    }
+
+    .top-bar-right img {
+      height: 24px;
+      margin-left: 16px;
+    }
+
+    .hero-section {
+      background-image: url("images/stadium-background.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 20px;
+      font-size: 1.6em;
+      font-weight: 800;
+    }
+
+    .hero-section img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .hero-section h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .offers-bar {
+      background: white;
+      padding: 16px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .offers-content {
+      display: inline-flex;
+      align-items: center;
+      gap: 1px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #003263;
+    }
+
+    .offers-logo {
+      height: 30px;
+    }
+
+    .red-line, .blue-line {
+      width: 2px;
+      height: 28px;
+    }
+
+    .red-line {
+      background-color: #c8102e;
+    }
+
+    .blue-line {
+      background-color: #003263;
+    }
+
+    .next-event {
+      text-align: left;
+      margin: 20px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .event-box {
+      background: white;
+      margin: 10px 20px;
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-date {
+      background-color: #003263;
+      color: white;
+      text-align: center;
+      padding: 4px;
+      width: 60px;
+      border-radius: 4px;
+      float: left;
+      margin-right: 12px;
+    }
+
+    .event-date span {
+      display: block;
+      background: white;
+      color: #003263;
+      font-weight: bold;
+      padding: 4px 0;
+      border-radius: 2px;
+      margin-top: 2px;
+    }
+
+    .event-info h3 {
+      font-size: 15px;
+      color: #003263;
+      margin: 0;
+    }
+
+    .event-info p {
+      font-size: 14px;
+      margin: 2px 0;
+    }
+    
+    .view-tickets {
+  display: block;
+  background: #c8102e;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 5px;
+  margin-top: 12px;
+  cursor: pointer;
+  text-decoration: none; /* removes underline */
+}
+
+    .view-tickets {
+      background: #c8102e;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      padding: 12px;
+      border-radius: 5px;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+
+    .inventory-button {
+      display: block;
+      background-color: #003263;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin: 30px auto;
+      width: 85%;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    @media (min-width: 600px) {
+      .event-box {
+        max-width: 500px;
+        margin: 30px auto;
+      }
+    }
+  </style>
+</head>
 <body>
 
-</body>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <img src="images/dodgers.png" alt="Texas Rangers Logo">
+    </div>
+    <div class="top-bar-right">
+      <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart Icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu Icon">
+    </div>
+  </div>
 
+  <div class="hero-section">
+    <img src="images/dodgers.png">
+    <h2>Hi, Andreana Lawrence</h2>
+  </div>
+
+  <div class="offers-bar">
+    <div class="offers-content">
+      <img class="offers-logo" src="images/dodger.png" alt="T Logo">
+      <div class="red-line"></div>
+      <div class="blue-line"></div>
+      CLICK HERE TO SEE YOUR OFFERS
+      <div class="red-line"></div>
+      <div class="blue-line"></div>
+    </div>
+  </div>
+
+  <div class="next-event">MY NEXT EVENT</div>
+
+<div class="event-box">
+  <div class="event-date">
+    MAY
+    <span>15</span>
+  </div>
+  <div class="event-info">
+    <h3>ATHLETIC AT LA DODGERS</h3>
+    <p>Thursday | 7:10PM CDT</p>
+    <p>DODGER STADIUM</p>
+  </div>
+  <div style="clear: both;"></div>
+  <a href="viewtick.html" class="view-tickets">VIEW TICKETS (4)</a>
+</div>
+
+  <a href="#" class="inventory-button">VIEW ALL TICKET INVENTORY</a>
+
+</body>
 </html>

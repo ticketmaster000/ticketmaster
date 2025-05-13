@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forward via Email</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header for email forwarding */
+    .email-header {
+      background-color: white;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid #ddd;
+    }
+    .email-header .cancel {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      color: #007aff;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .email-header .send {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      color: #007aff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Form styling */
+    .email-form {
+      background-color: white;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .email-form input,
+    .email-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    /* Event Info and Ticket Styles */
+    .event-info {
+      background-color: white;
+      text-align: center;
+      padding: 15px 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .event-info .team-logo {
+      height: 40px;
+    }
+    .event-center {
+      flex-grow: 1;
+      text-align: center;
+    }
+    .event-center h2 {
+      font-size: 16px;
+      margin: 0;
+    }
+    .event-center p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: gray;
+    }
+    .tickets-list {
+      flex-grow: 1;
+      overflow-y: auto;
+      background-color: white;
+      padding-bottom: 120px;
+    }
+    .ticket-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 15px;
+      border-bottom: 1px solid #ddd;
+      font-size: 16px;
+    }
+    .ticket-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .checkbox-space {
+      width: 24px;
+      height: 24px;
+    }
+    .ticket-info {
+      display: flex;
+      gap: 40px;
+      text-align: center;
+    }
+    .ticket-info div {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      color: gray;
+      font-weight: normal;
+    }
+    .ticket-info div small {
+      font-weight: bold;
+      color: black;
+      font-size: 15px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Email Forward Header -->
+  <div class="email-header">
+    <a href="#" class="cancel">Cancel</a>
+    Forward via Email
+    <span class="send">Send</span>
+  </div>
+
+  <!-- Email Form -->
+  <div class="email-form">
+    <input type="email" placeholder="Email*" required>
+    <input type="text" placeholder="Name">
+    <textarea placeholder="Message" rows="3"></textarea>
+  </div>
+
+  <!-- Event Info -->
+  <div class="event-info">
+    <img src="images/ath.png" class="team-logo">
+    <div class="event-center">
+      <h2>Athletic @ LA Dodgers</h2>
+      <p>Thu, May 15 • 7:10 PM CDT</p>
+      <p>DODGER STADIUM</p>
+    </div>
+    <img src="images/dodgers.png" class="team-logo">
+  </div>
+
+  <!-- Ticket List -->
+  <div class="tickets-list">
+    <!-- Ticket items for seats 2 to 8 -->
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>135LG</small></div>
+          <div>ROW<small>S</small></div>
+          <div>SEAT<small>2</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>135LG</small></div>
+          <div>ROW<small>S</small></div>
+          <div>SEAT<small>3</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>135LG</small></div>
+          <div>ROW<small>S</small></div>
+          <div>SEAT<small>4</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>135LG</small></div>
+          <div>ROW<small>S</small></div>
+          <div>SEAT<small>5</small></div>
+        </div>
+      </div>
+    </div>
+    
+    <!--
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>214A</small></div>
+          <div>ROW<small>9</small></div>
+          <div>SEAT<small>6</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>214A</small></div>
+          <div>ROW<small>9</small></div>
+          <div>SEAT<small>7</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="ticket-item">
+      <div class="ticket-left">
+        <div class="checkbox-space"></div>
+        <div class="ticket-info">
+          <div>SECTION<small>214A</small></div>
+          <div>ROW<small>9</small></div>
+          <div>SEAT<small>8</small></div>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+
+</body>
+</html>
